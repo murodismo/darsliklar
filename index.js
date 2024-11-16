@@ -1,4 +1,32 @@
+
 ////////////// 1-masala
+
+// function myFunc(s) {
+//     let start = 0, maxLength = 0
+
+//     function expandAroundCenter(left, right) {
+//         while (left >= 0 && right < s.length && s[left] === s[right]) {
+//             left--
+//             right++
+//         }
+//         return right - left - 1
+//     }
+
+//     for (let i = 0; i < s.length; i++) {
+//         let len1 = expandAroundCenter(i, i)
+//         let len2 = expandAroundCenter(i, i + 1)
+//         let len = Math.max(len1, len2)
+
+//         if (len > maxLength) {
+//             maxLength = len;
+//             start = i - Math.floor((len - 1) / 2)
+//         }
+//     }
+
+//     return s.substring(start, start + maxLength)
+// }
+
+// console.log(myFunc("babad"))
 
 ///////// 2-masala
 
@@ -101,3 +129,67 @@
 
 /////////// 7-masala
 
+// function myFunc(str) {
+//     let res = ''
+//     for (let i = 0; i < str.length; i++) {
+//         if (!isNaN(str[i]) && str[i] !== ' ') { 
+//             res += (parseInt(str[i]) + 1)
+//         } else {
+//             res += str[i]
+//         }
+//     }
+//     return res
+// }
+
+// console.log(myFunc("Hello1234"))
+
+
+////////////// 8-masala
+
+// function myFunc(arr) { 
+//     let big = 0   
+//     let a = 0
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] < arr[i + 1]) {
+//             a += 1
+//         }else if(big < a){
+//             big = a
+//             a = 0
+//         }
+//     }
+//     return big + 1
+// }
+// console.log(myFunc([12,22, 30, 5,6,7,8,9, 9]));
+
+
+///////// 9-masala
+
+// function myFunc(arr) {
+//     let res = {}
+//     for (let num of arr) {
+//         res[num] = (res[num] || 0) + 1
+//     }
+//     return res
+// }
+
+// console.log(myFunc([1, 2, 2, 3, 4, 4, 4, 5]))
+
+
+//////////// 10-masala
+
+// function myFunc(arr) {
+//     let sum = []
+//     let res = 0
+
+//     for (let i = 0; i < arr.length; i++) {
+//         sum.push(...arr[i])        
+//     }
+
+//     for (let i = 0; i < sum.length; i++) {
+//         res += sum[i]        
+//     }
+
+//     return res
+// }
+
+// console.log(myFunc([[23,43,23], [32,11,4], [13,22,4]]));
